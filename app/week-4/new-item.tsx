@@ -47,7 +47,7 @@ function NewItem() {
               }`}
 
           />
-          {name === "" && nameTouched && (
+          {name === "" && nameTouched && name.length < 2 && (
             <p className="text-red-500 text-xs mt-1 font-medium italic">Name is required</p>
           )}
           <input type="number" name="number" min={1} max={99} value={quantity} onChange={(e) => { setQuantity(Number(e.target.value)) }} required className="border p-2 rounded text-black" />
