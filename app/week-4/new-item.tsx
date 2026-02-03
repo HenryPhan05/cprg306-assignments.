@@ -50,7 +50,7 @@ function NewItem() {
           {name === "" && nameTouched && (
             <p className="text-red-500 text-xs mt-1 font-medium italic">Name is required</p>
           )}
-          <input type="number" name="number" min={1} max={99} value={1} onChange={(e) => { setQuantity(Number(e.target.value)) }} required className="border p-2 rounded text-black" />
+          <input type="number" name="number" min={1} max={99} value={quantity} onChange={(e) => { setQuantity(Number(e.target.value)) }} required className="border p-2 rounded text-black" />
           <select name="category" id="" className="border p-2 rounded text-black">
             <option value="product">Product</option>
             <option value="Dairy">Dairy</option>
