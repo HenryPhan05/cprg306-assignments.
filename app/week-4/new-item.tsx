@@ -71,9 +71,8 @@ function NewItem() {
           <button
             type="submit" onClick={handleSubmit}
             disabled={name === "" || name.length < 2}
-
             className={`border p-2 rounded text-black transition-colors
-    ${(name === "" || name.length < 2)
+              ${(name === "" || name.length < 2)
                 ? "bg-gray-400 cursor-not-allowed"
                 : "hover:bg-lime-500 cursor-pointer bg-white"
               }`}
