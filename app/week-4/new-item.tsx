@@ -5,7 +5,7 @@ function NewItem() {
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState("Product")
   const [nameTouched, setNameTouched] = useState<boolean>(false);
-  const [load, setLoad] = useState<boolean>(false);
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!name || name.length < 2) {
@@ -41,13 +41,17 @@ function NewItem() {
             onBlur={() => setNameTouched(true)}
             required
             /* Notice the backticks wrap the entire string */
-            className={`p-2 rounded text-black border ${name === "" && nameTouched
+            className={`p-2 rounded text-black border ${(name === "" || name.length < 2) && nameTouched
               ? "border-red-500 bg-red-50"
               : "border-gray-300"
               }`}
 
           />
+<<<<<<< HEAD
           {name === "" && nameTouched && name.length < 2 && (
+=======
+          {(name === "" || name.length < 2) && nameTouched && (
+>>>>>>> fc93aa8 (finish)
             <p className="text-red-500 text-xs mt-1 font-medium italic">Name is required</p>
           )}
           <input type="number" name="number" min={1} max={99} value={quantity} onChange={(e) => { setQuantity(Number(e.target.value)) }} required className="border p-2 rounded text-black" />
