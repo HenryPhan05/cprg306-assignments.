@@ -1,6 +1,6 @@
-import Item from "./item";
+
 import ItemList from "./item-list";
-import tailwindcss from "@tailwindcss/vite";
+
 function Page() {
   return (
     <>
